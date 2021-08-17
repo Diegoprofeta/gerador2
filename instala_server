@@ -66,11 +66,11 @@ cd /var/www/html/_S_script
 wget https://github.com/rodrigo12xd/gerador2/raw/main/sshplus-v32.zip > /dev/null 2>&1
 unzip sshplus-v32.zip > /dev/null 2>&1
 rm -rf sshplus-v32.zip
-cd sshplus-v32.zip
+cd sshplus-v32
 _mdls=("addhost" "delhost" "alterarsenha" "criarusuario" "expcleaner" "mudardata" "remover" "criarteste" "verifbot" "droplimiter" "alterarlimite" "ajuda" "sshmonitor" "badvpn" "userbackup" "instsqd" "blockt" "otimizar" "menu" "speedtest" "banner" "senharoot" "reiniciarservicos" "reiniciarsistema" "attscript" "conexao" "delscript" "detalhes" "botssh" "infousers" "verifatt" "limiter" "uexpired" "cabecalho" "bot" "open.py" "proxy.py" "wsproxy.py" "slow_dns")
 for _arq in ${_mdls[@]}; do
 	[[ -e $_dir1/$_arq ]] && rm $_dir1/$_arq >/dev/null 2>&1
-	mv $_arq /var/www/html/_S_script/
+	mv -c -P $_dir1 $_arq /var/www/html/_S_script/
 done
 cd
 # HISTORY
