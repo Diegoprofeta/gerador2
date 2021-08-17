@@ -71,6 +71,7 @@ _mdls=("addhost" "delhost" "alterarsenha" "criarusuario" "expcleaner" "mudardata
 for _arq in ${_mdls[@]}; do
 	[[ -e $_dir1/$_arq ]] && rm $_dir1/$_arq >/dev/null 2>&1
 	mv -c -P $_dir1 $_arq /var/www/html/_S_script/
+done
 cd
 # HISTORY
 cat /dev/null > ~/.bash_history && history -c
